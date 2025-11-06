@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete HTML Guide for Students</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Complete HTML Guide for Students</h1>
+        <p>Learn HTML from scratch with practical examples</p>
+        <hr>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#basic-structure">Basic Structure</a></li>
+            <li><a href="#text-elements">Text Elements</a></li>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#links">Links</a></li>
+            <li><a href="#images">Images</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#semantic">Semantic HTML</a></li>
+        </ul>
+        <hr>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Basic Structure Section -->
+        <section id="basic-structure">
+            <h2>1. Basic HTML Structure</h2>
+            <p>Every HTML document has a basic structure:</p>
+            
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Content goes here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+            
+            <h3>Explanation:</h3>
+            <ul>
+                <li><strong>&lt;!DOCTYPE html&gt;</strong> - Defines HTML5 document</li>
+                <li><strong>&lt;html&gt;</strong> - Root element</li>
+                <li><strong>&lt;head&gt;</strong> - Contains metadata</li>
+                <li><strong>&lt;body&gt;</strong> - Contains visible content</li>
+            </ul>
+            <hr>
+        </section>
+
+        <!-- Text Elements Section -->
+        <section id="text-elements">
+            <h2>2. Text Elements</h2>
+            
+            <h3>Headings:</h3>
+            <h1>This is Heading 1 (h1)</h1>
+            <h2>This is Heading 2 (h2)</h2>
+            <h3>This is Heading 3 (h3)</h3>
+            <h4>This is Heading 4 (h4)</h4>
+            <h5>This is Heading 5 (h5)</h5>
+            <h6>This is Heading 6 (h6)</h6>
+
+            <h3>Paragraphs and Formatting:</h3>
+            <p>This is a normal paragraph.</p>
+            <p>This is <strong>bold text</strong> and this is <em>italic text</em>.</p>
+            <p>This is <u>underlined text</u> and this is <mark>highlighted text</mark>.</p>
+            <p>This is <small>small text</small> and this is <del>deleted text</del>.</p>
+            
+            <h3>Code Example:</h3>
+            <pre>
+&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;p&gt;This is a &lt;strong&gt;paragraph&lt;/strong&gt; with &lt;em&gt;formatted&lt;/em&gt; text.&lt;/p&gt;
+            </pre>
+            <hr>
+        </section>
+
+        <!-- Lists Section -->
+        <section id="lists">
+            <h2>3. Lists</h2>
+            
+            <h3>Unordered List (bullets):</h3>
+            <ul>
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+            </ul>
+
+            <h3>Ordered List (numbers):</h3>
+            <ol>
+                <li>First step</li>
+                <li>Second step</li>
+                <li>Third step</li>
+            </ol>
+
+            <h3>Description List:</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>HyperText Markup Language</dd>
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets</dd>
+            </dl>
+
+            <h3>Code Example:</h3>
+            <pre>
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;First&lt;/li&gt;
+    &lt;li&gt;Second&lt;/li&gt;
+&lt;/ol&gt;
+            </pre>
+            <hr>
+        </section>
+
+        <!-- Links Section -->
+        <section id="links">
+            <h2>4. Links and Anchors</h2>
+            
+            <h3>External Link:</h3>
+            <p>Visit <a href="https://www.google.com">Google</a></p>
+            
+            <h3>Internal Link:</h3>
+            <p>Go to <a href="#text-elements">Text Elements section</a></p>
+            
+            <h3>Link with Target:</h3>
+            <p>Open <a href="https://www.example.com" target="_blank">Example.com in new tab</a></p>
+
+            <h3>Code Example:</h3>
+            <pre>
+&lt;a href="https://www.google.com"&gt;Visit Google&lt;/a&gt;
+&lt;a href="#section"&gt;Go to Section&lt;/a&gt;
+&lt;a href="page.html" target="_blank"&gt;Open in New Tab&lt;/a&gt;
+            </pre>
+            <hr>
+        </section>
+
+        <!-- Images Section -->
+        <section id="images">
+            <h2>5. Images</h2>
+            
+            <h3>Basic Image:</h3>
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+            
+            <h3>Image with Dimensions:</h3>
+            <img src="https://via.placeholder.com/300x100" alt="Wide placeholder" width="300" height="100">
+
+            <h3>Code Example:</h3>
+            <pre>
+&lt;img src="image.jpg" alt="Description"&gt;
+&lt;img src="photo.png" alt="Photo" width="200" height="150"&gt;
+            </pre>
+            
+            <p><strong>Note:</strong> The 'alt' attribute is important for accessibility!</p>
+            <hr>
+        </section>
+
+        <!-- Tables Section -->
+        <section id="tables">
+            <h2>6. Tables</h2>
+            
+            <h3>Simple Table:</h3>
+            <table border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>25</td>
+                    <td>New York</td>
+                </tr>
+                <tr>
+                    <td>Sarah</td>
+                    <td>30</td>
+                    <td>London</td>
+                </tr>
+            </table>
+
+            <h3>Code Example:</h3>
+            <pre>
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Header 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Data 1&lt;/td&gt;
+        &lt;td&gt;Data 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+            <hr>
+        </section>
+
+        <!-- Forms Section -->
+        <section id="forms">
+            <h2>7. Forms</h2>
+            
+            <h3>Contact Form Example:</h3>
+            <form>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br><br>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br><br>
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password"><br><br>
+                    
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="us">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="ca">Canada</option>
+                    </select><br><br>
+                    
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br><br>
+                    
+                    <label>Interests:</label>
+                    <input type="checkbox" id="sports" name="interests" value="sports">
+                    <label for="sports">Sports</label>
+                    <input type="checkbox" id="music" name="interests" value="music">
+                    <label for="music">Music</label>
+                    <input type="checkbox" id="books" name="interests" value="books">
+                    <label for="books">Books</label><br><br>
+                    
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="40"></textarea><br><br>
+                    
+                    <input type="submit" value="Send">
+                    <input type="reset" value="Clear">
+                </fieldset>
+            </form>
+
+            <h3>Code Example:</h3>
+            <pre>
+&lt;form&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    
+    &lt;input type="radio" id="male" name="gender"&gt;
+    &lt;label for="male"&gt;Male&lt;/label&gt;
+    
+    &lt;input type="submit" value="Send"&gt;
+&lt;/form&gt;
+            </pre>
+            <hr>
+        </section>
+
+        <!-- Semantic HTML Section -->
+        <section id="semantic">
+            <h2>8. Semantic HTML</h2>
+            <p>Semantic elements clearly describe their meaning to both browser and developer.</p>
+            
+            <h3>Common Semantic Elements:</h3>
+            <ul>
+                <li><strong>&lt;header&gt;</strong> - Introductory content</li>
+                <li><strong>&lt;nav&gt;</strong> - Navigation links</li>
+                <li><strong>&lt;main&gt;</strong> - Main content</li>
+                <li><strong>&lt;section&gt;</strong> - Thematic grouping</li>
+                <li><strong>&lt;article&gt;</strong> - Self-contained content</li>
+                <li><strong>&lt;aside&gt;</strong> - Sidebar content</li>
+                <li><strong>&lt;footer&gt;</strong> - Footer content</li>
+                <li><strong>&lt;figure&gt;</strong> - Images with captions</li>
+                <li><strong>&lt;figcaption&gt;</strong> - Caption for figure</li>
+            </ul>
+
+            <h3>Example Structure:</h3>
+            <pre>
+&lt;header&gt;
+    &lt;h1&gt;Website Title&lt;/h1&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Article Title&lt;/h2&gt;
+        &lt;p&gt;Article content...&lt;/p&gt;
+    &lt;/article&gt;
+    
+    &lt;aside&gt;
+        &lt;h3&gt;Related Links&lt;/h3&gt;
+        &lt;ul&gt;...&lt;/ul&gt;
+    &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;Copyright information&lt;/p&gt;
+&lt;/footer&gt;
+            </pre>
+            
+            <h3>Benefits of Semantic HTML:</h3>
+            <ul>
+                <li>Better accessibility</li>
+                <li>Improved SEO</li>
+                <li>Easier to read and maintain</li>
+                <li>Better compatibility with assistive technologies</li>
+            </ul>
+            <hr>
+        </section>
+
+        <!-- HTML Entities Section -->
+        <section id="entities">
+            <h2>9. HTML Entities</h2>
+            <p>Special characters that need to be encoded in HTML:</p>
+            
+            <table border="1">
+                <tr>
+                    <th>Character</th>
+                    <th>Entity</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>&lt;</td>
+                    <td>&amp;lt;</td>
+                    <td>Less than</td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>&amp;gt;</td>
+                    <td>Greater than</td>
+                </tr>
+                <tr>
+                    <td>&amp;</td>
+                    <td>&amp;amp;</td>
+                    <td>Ampersand</td>
+                </tr>
+                <tr>
+                    <td>"</td>
+                    <td>&amp;quot;</td>
+                    <td>Double quote</td>
+                </tr>
+                <tr>
+                    <td>&copy;</td>
+                    <td>&amp;copy;</td>
+                    <td>Copyright</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&amp;nbsp;</td>
+                    <td>Non-breaking space</td>
+                </tr>
+            </table>
+            <hr>
+        </section>
+
+        <!-- Practice Section -->
+        <section id="practice">
+            <h2>10. Practice Exercise</h2>
+            <p>Create a simple personal webpage using the following elements:</p>
+            
+            <ol>
+                <li>Proper HTML5 structure</li>
+                <li>Header with your name</li>
+                <li>Navigation menu</li>
+                <li>About me section</li>
+                <li>Image of yourself (or placeholder)</li>
+                <li>List of hobbies</li>
+                <li>Contact form</li>
+                <li>Footer with copyright</li>
+            </ol>
+            
+            <h3>Tips:</h3>
+            <ul>
+                <li>Use semantic HTML elements</li>
+                <li>Always include alt text for images</li>
+                <li>Use proper heading hierarchy</li>
+                <li>Validate your HTML using W3C Validator</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <hr>
+        <p>HTML Guide for Students &copy; 2023</p>
+        <p>Remember: HTML defines the structure, CSS adds styling, JavaScript adds interactivity!</p>
+    </footer>
+</body>
+</html>
