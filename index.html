@@ -3,13 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Complete HTML Guide for Students</title>
+    <style>
+        /* Exercise-specific styles that complement your existing CSS */
+        .exercise {
+            background: var(--code-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .exercise h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .requirements {
+            background: white;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .toggle-solution {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 1rem 0;
+        }
+
+        .toggle-solution:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .solution {
+            display: none;
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            border-left: 4px solid var(--accent-color);
+            overflow-x: auto;
+        }
+
+        .solution.show {
+            display: block;
+        }
+
+        .solution pre {
+            background: transparent;
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .solution code {
+            background: transparent;
+            color: inherit;
+            padding: 0;
+        }
+
+        .level-indicator {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 1rem;
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .level-beginner { background: var(--success-color); }
+        .level-intermediate { background: var(--accent-color); }
+        .level-advanced { background: var(--primary-color); }
+        .level-professional { background: var(--secondary-color); }
+
+        .exercise-grid {
+            display: grid;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .exercise-nav {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .exercise-nav a {
+            background: var(--bg-color);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .exercise-nav a:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <h1>Complete HTML Guide for Students</h1>
-        <p>Learn HTML from scratch with practical examples</p>
+        <p>Learn HTML from scratch with practical examples and 100+ exercises</p>
         <hr>
     </header>
 
@@ -25,12 +139,16 @@
             <li><a href="#tables">Tables</a></li>
             <li><a href="#forms">Forms</a></li>
             <li><a href="#semantic">Semantic HTML</a></li>
+            <li><a href="#entities">HTML Entities</a></li>
+            <li><a href="#practice">Practice Exercise</a></li>
+            <li><a href="#exercises">100+ Exercises</a></li>
         </ul>
         <hr>
     </nav>
 
     <!-- Main Content -->
     <main>
+        <!-- Your existing sections (Basic Structure through Practice Exercise) -->
         <!-- Basic Structure Section -->
         <section id="basic-structure">
             <h2>1. Basic HTML Structure</h2>
@@ -391,13 +509,1942 @@
                 <li>Validate your HTML using W3C Validator</li>
             </ul>
         </section>
+
+        <!-- ==================== 100 EXERCISES SECTION ==================== -->
+        <section id="exercises">
+            <h2>🚀 100+ HTML Practice Exercises</h2>
+            <p>Master HTML through practical exercises from beginner to professional level. Each exercise includes clear objectives and hidden solutions.</p>
+
+            <div class="exercise-nav">
+                <a href="#level-1">Level 1: Beginner (1-25)</a>
+                <a href="#level-2">Level 2: Intermediate (26-50)</a>
+                <a href="#level-3">Level 3: Advanced (51-75)</a>
+                <a href="#level-4">Level 4: Professional (76-100)</a>
+            </div>
+
+            <!-- LEVEL 1: BEGINNER -->
+ <article id="level-1">
+                <h3>Level 1: Beginner (Exercises 1-25)</h3>
+                
+                <!-- Exercise 1 -->
+                <div class="exercise">
+                    <h4>Exercise 1: My First HTML Page</h4>
+                    <p><strong>Objective:</strong> Create a basic HTML5 page structure</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Use proper HTML5 doctype declaration</li>
+                            <li>Include charset and viewport meta tags</li>
+                            <li>Add a title "My First Web Page"</li>
+                            <li>Create an h1 heading with your name</li>
+                            <li>Add a paragraph introducing yourself</li>
+                            <li>Include your favorite quote in a blockquote</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(1)">Show Solution</button>
+                    <div class="solution" id="solution-1">
+                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;John Doe&lt;/h1&gt;
+    &lt;p&gt;Hello! I'm learning HTML and this is my first web page.&lt;/p&gt;
+    &lt;blockquote&gt;
+        "The only way to do great work is to love what you do." - Steve Jobs
+    &lt;/blockquote&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 2 -->
+                <div class="exercise">
+                    <h4>Exercise 2: Headings Hierarchy</h4>
+                    <p><strong>Objective:</strong> Practice using all heading levels correctly</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Create a proper heading hierarchy for a book store website</li>
+                            <li>Use h1 for the main store name</li>
+                            <li>Use h2 for main categories (Fiction, Non-Fiction)</li>
+                            <li>Use h3 for subcategories (Science Fiction, Mystery)</li>
+                            <li>Include h4 for specific genres</li>
+                            <li>Add paragraphs under each heading describing the category</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(2)">Show Solution</button>
+                    <div class="solution" id="solution-2">
+                        <pre><code>&lt;h1&gt;Bookworm's Paradise&lt;/h1&gt;
+&lt;h2&gt;Fiction Books&lt;/h2&gt;
+&lt;p&gt;Explore our wide collection of fiction books.&lt;/p&gt;
+&lt;h3&gt;Science Fiction&lt;/h3&gt;
+&lt;p&gt;Journey to distant galaxies and futuristic worlds.&lt;/p&gt;
+&lt;h4&gt;Space Opera&lt;/h4&gt;
+&lt;p&gt;Epic tales set in outer space.&lt;/p&gt;
+&lt;h4&gt;Cyberpunk&lt;/h4&gt;
+&lt;p&gt;High-tech, low-life futures.&lt;/p&gt;
+&lt;h3&gt;Mystery&lt;/h3&gt;
+&lt;p&gt;Solve puzzles and uncover secrets.&lt;/p&gt;
+&lt;h2&gt;Non-Fiction&lt;/h2&gt;
+&lt;p&gt;Learn from real-world knowledge and experiences.&lt;/p&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 3 -->
+                <div class="exercise">
+                    <h4>Exercise 3: Text Formatting Playground</h4>
+                    <p><strong>Objective:</strong> Master all text formatting tags</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Create a sentence using &lt;strong&gt; for important text</li>
+                            <li>Use &lt;em&gt; for emphasized text</li>
+                            <li>Include &lt;u&gt; for underlined text</li>
+                            <li>Add &lt;mark&gt; for highlighted text</li>
+                            <li>Use &lt;small&gt; for fine print</li>
+                            <li>Show &lt;del&gt; and &lt;ins&gt; for text edits</li>
+                            <li>Include &lt;sub&gt; and &lt;sup&gt; for scientific notation</li>
+                            <li>Add &lt;code&gt; for inline code examples</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(3)">Show Solution</button>
+                    <div class="solution" id="solution-3">
+                        <pre><code>&lt;p&gt;
+    This is a &lt;strong&gt;very important&lt;/strong&gt; point that needs 
+    &lt;em&gt;emphasis&lt;/em&gt;. Sometimes you need to &lt;u&gt;underline&lt;/u&gt; 
+    key terms or &lt;mark&gt;highlight crucial information&lt;/mark&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+    &lt;small&gt;Terms and conditions apply. Read carefully.&lt;/small&gt;
+&lt;/p&gt;
+&lt;p&gt;
+    The meeting is on &lt;del&gt;Monday&lt;/del&gt; &lt;ins&gt;Tuesday&lt;/ins&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+    Scientific notation: H&lt;sub&gt;2&lt;/sub&gt;O for water, 
+    E=mc&lt;sup&gt;2&lt;/sup&gt; for energy mass equivalence.
+&lt;/p&gt;
+&lt;p&gt;
+    Use the &lt;code&gt;console.log()&lt;/code&gt; function for debugging.
+&lt;/p&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 4 -->
+                <div class="exercise">
+                    <h4>Exercise 4: Comprehensive Lists</h4>
+                    <p><strong>Objective:</strong> Create different types of lists</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Unordered list for grocery items</li>
+                            <li>Ordered list for recipe steps</li>
+                            <li>Description list for tech terms</li>
+                            <li>Nested list for categories and subcategories</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(4)">Show Solution</button>
+                    <div class="solution" id="solution-4">
+                        <pre><code>&lt;h3&gt;Grocery List&lt;/h3&gt;
+&lt;ul&gt;
+    &lt;li&gt;Milk&lt;/li&gt;
+    &lt;li&gt;Eggs&lt;/li&gt;
+    &lt;li&gt;Bread&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Recipe Steps&lt;/h3&gt;
+&lt;ol&gt;
+    &lt;li&gt;Preheat oven to 350°F&lt;/li&gt;
+    &lt;li&gt;Mix ingredients&lt;/li&gt;
+    &lt;li&gt;Bake for 30 minutes&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Tech Terms&lt;/h3&gt;
+&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h3&gt;Categories&lt;/h3&gt;
+&lt;ul&gt;
+    &lt;li&gt;Fruits
+        &lt;ul&gt;
+            &lt;li&gt;Apples&lt;/li&gt;
+            &lt;li&gt;Oranges&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Vegetables
+        &lt;ul&gt;
+            &lt;li&gt;Carrots&lt;/li&gt;
+            &lt;li&gt;Broccoli&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 5 -->
+                <div class="exercise">
+                    <h4>Exercise 5: Link Collection Page</h4>
+                    <p><strong>Objective:</strong> Create a useful links page with different types of links</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>5 external links (opens in new tab)</li>
+                            <li>3 internal anchor links to page sections</li>
+                            <li>1 email link</li>
+                            <li>1 telephone link</li>
+                            <li>Use descriptive link text</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(5)">Show Solution</button>
+                    <div class="solution" id="solution-5">
+                        <pre><code>&lt;h2&gt;Useful Links&lt;/h2&gt;
+&lt;h3&gt;External Resources&lt;/h3&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href="https://www.google.com" target="_blank"&gt;Google Search&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://github.com" target="_blank"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://stackoverflow.com" target="_blank"&gt;Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Page Navigation&lt;/h3&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href="#about"&gt;About Me&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#projects"&gt;My Projects&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Contact Links&lt;/h3&gt;
+&lt;p&gt;
+    &lt;a href="mailto:hello@example.com"&gt;Email Me&lt;/a&gt; | 
+    &lt;a href="tel:+1234567890"&gt;Call Me&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 6 -->
+                <div class="exercise">
+                    <h4>Exercise 6: Image Gallery</h4>
+                    <p><strong>Objective:</strong> Create an image gallery with proper accessibility</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Add 4 different images using &lt;img&gt; tag</li>
+                            <li>Always include descriptive alt attributes</li>
+                            <li>Set specific width and height for two images</li>
+                            <li>Let two images use natural dimensions</li>
+                            <li>Add captions below each image</li>
+                            <li>Use placeholder images from "https://via.placeholder.com"</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(6)">Show Solution</button>
+                    <div class="solution" id="solution-6">
+                        <pre><code>&lt;h2&gt;My Image Gallery&lt;/h2&gt;
+&lt;div class="gallery"&gt;
+    &lt;img src="https://via.placeholder.com/300x200" alt="Beautiful landscape with mountains" width="300" height="200"&gt;
+    &lt;p&gt;Scenic mountain landscape&lt;/p&gt;
+    &lt;img src="https://via.placeholder.com/250x150" alt="Modern city skyline at night" width="250" height="150"&gt;
+    &lt;p&gt;City skyline view&lt;/p&gt;
+    &lt;img src="https://via.placeholder.com/400x300" alt="Colorful abstract art pattern"&gt;
+    &lt;p&gt;Abstract art design&lt;/p&gt;
+    &lt;img src="https://via.placeholder.com/350x250" alt="Close-up of coffee beans"&gt;
+    &lt;p&gt;Coffee beans macro shot&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 7 -->
+                <div class="exercise">
+                    <h4>Exercise 7: Simple Data Table</h4>
+                    <p><strong>Objective:</strong> Create a basic table to display structured data</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Create a table with border="1" for visibility</li>
+                            <li>Add table headers for: Name, Age, City, Occupation</li>
+                            <li>Include 4 rows of data with different people's information</li>
+                            <li>Use proper table structure with &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</li>
+                            <li>Add a table caption describing the data</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(7)">Show Solution</button>
+                    <div class="solution" id="solution-7">
+                        <pre><code>&lt;table border="1"&gt;
+    &lt;caption&gt;Employee Information&lt;/caption&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+        &lt;th&gt;City&lt;/th&gt;
+        &lt;th&gt;Occupation&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;John Smith&lt;/td&gt;
+        &lt;td&gt;28&lt;/td&gt;
+        &lt;td&gt;New York&lt;/td&gt;
+        &lt;td&gt;Web Developer&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Sarah Johnson&lt;/td&gt;
+        &lt;td&gt;32&lt;/td&gt;
+        &lt;td&gt;London&lt;/td&gt;
+        &lt;td&gt;Graphic Designer&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 8 -->
+                <div class="exercise">
+                    <h4>Exercise 8: Basic Contact Form</h4>
+                    <p><strong>Objective:</strong> Create a simple contact form with common input types</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Create a form element</li>
+                            <li>Add text input for name with type="text"</li>
+                            <li>Include email input with type="email"</li>
+                            <li>Add a subject input field</li>
+                            <li>Create a message textarea with rows and cols</li>
+                            <li>Add a submit button</li>
+                            <li>Use proper label elements for each input</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(8)">Show Solution</button>
+                    <div class="solution" id="solution-8">
+                        <pre><code>&lt;h2&gt;Contact Us&lt;/h2&gt;
+&lt;form&gt;
+    &lt;div&gt;
+        &lt;label for="name"&gt;Full Name:&lt;/label&gt;&lt;br&gt;
+        &lt;input type="text" id="name" name="name" required&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for="email"&gt;Email Address:&lt;/label&gt;&lt;br&gt;
+        &lt;input type="email" id="email" name="email" required&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for="message"&gt;Message:&lt;/label&gt;&lt;br&gt;
+        &lt;textarea id="message" name="message" rows="5" cols="40"&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input type="submit" value="Send Message"&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 9 -->
+                <div class="exercise">
+                    <h4>Exercise 9: Semantic Blog Article</h4>
+                    <p><strong>Objective:</strong> Create a blog post using semantic HTML5 elements</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Use &lt;article&gt; as the main container</li>
+                            <li>Add &lt;header&gt; with title and publication date</li>
+                            <li>Create content sections using &lt;section&gt;</li>
+                            <li>Include an image with &lt;figure&gt; and &lt;figcaption&gt;</li>
+                            <li>Add author info in &lt;aside&gt;</li>
+                            <li>Use &lt;footer&gt; for copyright information</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(9)">Show Solution</button>
+                    <div class="solution" id="solution-9">
+                        <pre><code>&lt;article&gt;
+    &lt;header&gt;
+        &lt;h1&gt;The Future of Web Development&lt;/h1&gt;
+        &lt;p&gt;Published on &lt;time datetime="2024-01-15"&gt;January 15, 2024&lt;/time&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Introduction&lt;/h2&gt;
+        &lt;p&gt;Web development continues to evolve at a rapid pace.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;figure&gt;
+        &lt;img src="https://via.placeholder.com/600x300" alt="Web development trends"&gt;
+        &lt;figcaption&gt;Latest trends in web development&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;aside&gt;
+        &lt;h3&gt;About the Author&lt;/h3&gt;
+        &lt;p&gt;John Smith is a senior web developer.&lt;/p&gt;
+    &lt;/aside&gt;
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2024 Tech Blog. All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 10 -->
+                <div class="exercise">
+                    <h4>Exercise 10: HTML Entities Practice</h4>
+                    <p><strong>Objective:</strong> Learn to use HTML entities for special characters</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Create a table with 3 columns: Character, Entity, Description</li>
+                            <li>Include common symbols: &lt; &gt; &amp; &copy; &reg;</li>
+                            <li>Add currency symbols: &euro; &pound; &yen;</li>
+                            <li>Include arrows and mathematical operators</li>
+                            <li>Use proper table structure</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(10)">Show Solution</button>
+                    <div class="solution" id="solution-10">
+                        <pre><code>&lt;h2&gt;HTML Entities Reference&lt;/h2&gt;
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Character&lt;/th&gt;
+        &lt;th&gt;Entity&lt;/th&gt;
+        &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;&lt;/td&gt;
+        &lt;td&gt;&amp;lt;&lt;/td&gt;
+        &lt;td&gt;Less than&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&gt;&lt;/td&gt;
+        &lt;td&gt;&amp;gt;&lt;/td&gt;
+        &lt;td&gt;Greater than&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&copy;&lt;/td&gt;
+        &lt;td&gt;&amp;copy;&lt;/td&gt;
+        &lt;td&gt;Copyright&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                    </div>
+                </div>
+                <!-- Exercise 11 -->
+                <div class="exercise">
+                    <h4>Exercise 11: Registration Form with Validation</h4>
+                    <p><strong>Objective:</strong> Create a user registration form with HTML5 validation</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Create form with required fields for username, email, and password</li>
+                            <li>Add password confirmation field</li>
+                            <li>Include date of birth with type="date"</li>
+                            <li>Add phone number field with type="tel"</li>
+                            <li>Use required attribute for mandatory fields</li>
+                            <li>Add pattern attribute for username validation</li>
+                            <li>Include terms and conditions checkbox</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(11)">Show Solution</button>
+                    <div class="solution" id="solution-11">
+                        <pre><code>&lt;h2&gt;User Registration&lt;/h2&gt;
+&lt;form&gt;
+    &lt;div&gt;
+        &lt;label for="username"&gt;Username:&lt;/label&gt;&lt;br&gt;
+        &lt;input type="text" id="username" name="username" required pattern="[A-Za-z0-9]+"&gt;
+        &lt;small&gt;Letters and numbers only&lt;/small&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for="email"&gt;Email:&lt;/label&gt;&lt;br&gt;
+        &lt;input type="email" id="email" name="email" required&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for="password"&gt;Password:&lt;/label&gt;&lt;br&gt;
+        &lt;input type="password" id="password" name="password" required minlength="8"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for="confirm-password"&gt;Confirm Password:&lt;/label&gt;&lt;br&gt;
+        &lt;input type="password" id="confirm-password" name="confirm-password" required&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for="birthdate"&gt;Date of Birth:&lt;/label&gt;&lt;br&gt;
+        &lt;input type="date" id="birthdate" name="birthdate"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input type="checkbox" id="terms" name="terms" required&gt;
+        &lt;label for="terms"&gt;I agree to the terms and conditions&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input type="submit" value="Register"&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 12 -->
+                <div class="exercise">
+                    <h4>Exercise 12: Complex Nested Lists</h4>
+                    <p><strong>Objective:</strong> Create deeply nested lists for complex information hierarchy</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Create a multi-level course curriculum outline</li>
+                            <li>Use mixed list types (ordered and unordered)</li>
+                            <li>Go three levels deep with proper indentation</li>
+                            <li>Include both theoretical and practical sections</li>
+                            <li>Add time estimates for each module</li>
+                            <li>Use consistent formatting throughout</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(12)">Show Solution</button>
+                    <div class="solution" id="solution-12">
+                        <pre><code>&lt;h2&gt;Web Development Course Curriculum&lt;/h2&gt;
+&lt;ol&gt;
+    &lt;li&gt;HTML Fundamentals (2 weeks)
+        &lt;ul&gt;
+            &lt;li&gt;Basic Structure
+                &lt;ul&gt;
+                    &lt;li&gt;Doctype and HTML elements&lt;/li&gt;
+                    &lt;li&gt;Head and Body sections&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Text Elements
+                &lt;ul&gt;
+                    &lt;li&gt;Headings and paragraphs&lt;/li&gt;
+                    &lt;li&gt;Formatting tags&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;CSS Styling (3 weeks)
+        &lt;ul&gt;
+            &lt;li&gt;Selectors and Properties
+                &lt;ul&gt;
+                    &lt;li&gt;Class and ID selectors&lt;/li&gt;
+                    &lt;li&gt;Color and typography&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Layout Techniques
+                &lt;ul&gt;
+                    &lt;li&gt;Box model&lt;/li&gt;
+                    &lt;li&gt;Flexbox and Grid&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 13 -->
+                <div class="exercise">
+                    <h4>Exercise 13: Advanced Table with Structure</h4>
+                    <p><strong>Objective:</strong> Create a complex table with proper semantic structure</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Use thead, tbody, and tfoot elements</li>
+                            <li>Add colspan for cells that span multiple columns</li>
+                            <li>Include rowspan for cells that span multiple rows</li>
+                            <li>Add a caption for table description</li>
+                            <li>Use scope attribute for accessibility</li>
+                            <li>Create a product price list with categories</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(13)">Show Solution</button>
+                    <div class="solution" id="solution-13">
+                        <pre><code>&lt;table border="1"&gt;
+    &lt;caption&gt;Product Price List&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;Category&lt;/th&gt;
+            &lt;th scope="col"&gt;Product&lt;/th&gt;
+            &lt;th scope="col"&gt;Price&lt;/th&gt;
+            &lt;th scope="col"&gt;Stock&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td rowspan="2"&gt;Electronics&lt;/td&gt;
+            &lt;td&gt;Laptop&lt;/td&gt;
+            &lt;td&gt;$999&lt;/td&gt;
+            &lt;td&gt;15&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Smartphone&lt;/td&gt;
+            &lt;td&gt;$699&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td rowspan="2"&gt;Books&lt;/td&gt;
+            &lt;td&gt;HTML Guide&lt;/td&gt;
+            &lt;td&gt;$29&lt;/td&gt;
+            &lt;td&gt;50&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="3"&gt;Total Products&lt;/td&gt;
+            &lt;td&gt;90&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 14 -->
+                <div class="exercise">
+                    <h4>Exercise 14: Form with Radio Buttons and Checkboxes</h4>
+                    <p><strong>Objective:</strong> Create a survey form with various input types</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Create a customer satisfaction survey</li>
+                            <li>Use radio buttons for single-choice questions (rating)</li>
+                            <li>Use checkboxes for multiple-choice questions (features)</li>
+                            <li>Add a dropdown select for age range</li>
+                            <li>Include a range input for satisfaction level</li>
+                            <li>Add a submit button</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(14)">Show Solution</button>
+                    <div class="solution" id="solution-14">
+                        <pre><code>&lt;h2&gt;Customer Satisfaction Survey&lt;/h2&gt;
+&lt;form&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Personal Information&lt;/legend&gt;
+        &lt;label for="age"&gt;Age Range:&lt;/label&gt;
+        &lt;select id="age" name="age"&gt;
+            &lt;option value="18-25"&gt;18-25&lt;/option&gt;
+            &lt;option value="26-35"&gt;26-35&lt;/option&gt;
+            &lt;option value="36-45"&gt;36-45&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/fieldset&gt;
+
+    &lt;fieldset&gt;
+        &lt;legend&gt;How would you rate our service?&lt;/legend&gt;
+        &lt;input type="radio" id="excellent" name="rating" value="excellent"&gt;
+        &lt;label for="excellent"&gt;Excellent&lt;/label&gt;&lt;br&gt;
+        &lt;input type="radio" id="good" name="rating" value="good"&gt;
+        &lt;label for="good"&gt;Good&lt;/label&gt;&lt;br&gt;
+        &lt;input type="radio" id="average" name="rating" value="average"&gt;
+        &lt;label for="average"&gt;Average&lt;/label&gt;&lt;br&gt;
+    &lt;/fieldset&gt;
+
+    &lt;fieldset&gt;
+        &lt;legend&gt;Which features do you use? (Select all that apply)&lt;/legend&gt;
+        &lt;input type="checkbox" id="feature1" name="features" value="mobile"&gt;
+        &lt;label for="feature1"&gt;Mobile App&lt;/label&gt;&lt;br&gt;
+        &lt;input type="checkbox" id="feature2" name="features" value="web"&gt;
+        &lt;label for="feature2"&gt;Web Platform&lt;/label&gt;&lt;br&gt;
+        &lt;input type="checkbox" id="feature3" name="features" value="support"&gt;
+        &lt;label for="feature3"&gt;Customer Support&lt;/label&gt;&lt;br&gt;
+    &lt;/fieldset&gt;
+
+    &lt;input type="submit" value="Submit Survey"&gt;
+&lt;/form&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 15 -->
+                <div class="exercise">
+                    <h4>Exercise 15: Semantic Navigation Menu</h4>
+                    <p><strong>Objective:</strong> Create a semantic navigation menu with proper structure</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Use &lt;nav&gt; element for navigation</li>
+                            <li>Create an unordered list for menu items</li>
+                            <li>Include 5 main navigation links</li>
+                            <li>Add a dropdown submenu for one item</li>
+                            <li>Use proper ARIA attributes for accessibility</li>
+                            <li>Include a logo or site title</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(15)">Show Solution</button>
+                    <div class="solution" id="solution-15">
+                        <pre><code>&lt;nav aria-label="Main navigation"&gt;
+    &lt;div class="logo"&gt;
+        &lt;h1&gt;MyWebsite&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#home" aria-current="page"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#services"&gt;Services&lt;/a&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#web-dev"&gt;Web Development&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#design"&gt;Design&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#consulting"&gt;Consulting&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="#portfolio"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 16 -->
+                <div class="exercise">
+                    <h4>Exercise 16: Article with Comments Section</h4>
+                    <p><strong>Objective:</strong> Create a blog article with a comments section</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Use &lt;article&gt; for main content</li>
+                            <li>Add &lt;header&gt; with title, author, and date</li>
+                            <li>Include multiple &lt;section&gt; elements for content</li>
+                            <li>Create a comments section with &lt;section&gt;</li>
+                            <li>Add individual comments using &lt;article&gt;</li>
+                            <li>Include comment author and timestamp</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(16)">Show Solution</button>
+                    <div class="solution" id="solution-16">
+                        <pre><code>&lt;article&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Understanding Semantic HTML&lt;/h1&gt;
+        &lt;p&gt;By John Doe | &lt;time datetime="2024-01-20"&gt;January 20, 2024&lt;/time&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    
+    &lt;section&gt;
+        &lt;h2&gt;Introduction&lt;/h2&gt;
+        &lt;p&gt;Semantic HTML helps search engines and screen readers understand your content.&lt;/p&gt;
+    &lt;/section&gt;
+    
+    &lt;section&gt;
+        &lt;h2&gt;Benefits&lt;/h2&gt;
+        &lt;p&gt;Improved accessibility and better SEO are key benefits.&lt;/p&gt;
+    &lt;/section&gt;
+    
+    &lt;section id="comments"&gt;
+        &lt;h2&gt;Comments&lt;/h2&gt;
+        &lt;article class="comment"&gt;
+            &lt;header&gt;
+                &lt;strong&gt;Jane Smith&lt;/strong&gt; - 
+                &lt;time datetime="2024-01-21"&gt;January 21, 2024&lt;/time&gt;
+            &lt;/header&gt;
+            &lt;p&gt;Great article! Very helpful for beginners.&lt;/p&gt;
+        &lt;/article&gt;
+        &lt;article class="comment"&gt;
+            &lt;header&gt;
+                &lt;strong&gt;Mike Johnson&lt;/strong&gt; - 
+                &lt;time datetime="2024-01-22"&gt;January 22, 2024&lt;/time&gt;
+            &lt;/header&gt;
+            &lt;p&gt;Thanks for explaining this so clearly.&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/section&gt;
+&lt;/article&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 17 -->
+                <div class="exercise">
+                    <h4>Exercise 17: Product Card Layout</h4>
+                    <p><strong>Objective:</strong> Create a product card using semantic HTML</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Use &lt;article&gt; for each product card</li>
+                            <li>Include product image with &lt;figure&gt;</li>
+                            <li>Add product title, description, and price</li>
+                            <li>Include a "Add to Cart" button</li>
+                            <li>Add product rating with stars (using text)</li>
+                            <li>Include availability status</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(17)">Show Solution</button>
+                    <div class="solution" id="solution-17">
+                        <pre><code>&lt;article class="product-card"&gt;
+    &lt;figure&gt;
+        &lt;img src="https://via.placeholder.com/200x150" alt="Wireless Headphones"&gt;
+        &lt;figcaption&gt;Premium Wireless Headphones&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    
+    &lt;header&gt;
+        &lt;h3&gt;Noise-Canceling Headphones&lt;/h3&gt;
+        &lt;div class="rating"&gt;★★★★☆ (4.0)&lt;/div&gt;
+    &lt;/header&gt;
+    
+    &lt;section&gt;
+        &lt;p&gt;High-quality wireless headphones with active noise cancellation.&lt;/p&gt;
+        &lt;p class="price"&gt;$199.99&lt;/p&gt;
+        &lt;p class="availability"&gt;In Stock&lt;/p&gt;
+    &lt;/section&gt;
+    
+    &lt;footer&gt;
+        &lt;button&gt;Add to Cart&lt;/button&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 18 -->
+                <div class="exercise">
+                    <h4>Exercise 18: FAQ Section</h4>
+                    <p><strong>Objective:</strong> Create an FAQ section using details and summary elements</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Use &lt;details&gt; and &lt;summary&gt; for each FAQ item</li>
+                            <li>Create 5 different FAQ questions</li>
+                            <li>Include proper answers for each question</li>
+                            <li>Add a main heading for the FAQ section</li>
+                            <li>Use semantic sectioning elements</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(18)">Show Solution</button>
+                    <div class="solution" id="solution-18">
+                        <pre><code>&lt;section id="faq"&gt;
+    &lt;h2&gt;Frequently Asked Questions&lt;/h2&gt;
+    
+    &lt;details&gt;
+        &lt;summary&gt;What is HTML?&lt;/summary&gt;
+        &lt;p&gt;HTML stands for HyperText Markup Language. It's the standard language for creating web pages.&lt;/p&gt;
+    &lt;/details&gt;
+    
+    &lt;details&gt;
+        &lt;summary&gt;Do I need to learn HTML to build websites?&lt;/summary&gt;
+        &lt;p&gt;Yes, HTML is fundamental to web development and essential for creating web pages.&lt;/p&gt;
+    &lt;/details&gt;
+    
+    &lt;details&gt;
+        &lt;summary&gt;What are semantic HTML elements?&lt;/summary&gt;
+        &lt;p&gt;Semantic elements clearly describe their meaning to both browser and developer.&lt;/p&gt;
+    &lt;/details&gt;
+    
+    &lt;details&gt;
+        &lt;summary&gt;How long does it take to learn HTML?&lt;/summary&gt;
+        &lt;p&gt;Basic HTML can be learned in a few weeks, but mastery takes continuous practice.&lt;/p&gt;
+    &lt;/details&gt;
+    
+    &lt;details&gt;
+        &lt;summary&gt;What tools do I need to write HTML?&lt;/summary&gt;
+        &lt;p&gt;You only need a text editor and a web browser to get started with HTML.&lt;/p&gt;
+    &lt;/details&gt;
+&lt;/section&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 19 -->
+                <div class="exercise">
+                    <h4>Exercise 19: Event Schedule Table</h4>
+                    <p><strong>Objective:</strong> Create a complex event schedule table</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Create a weekly event schedule</li>
+                            <li>Use colspan for multi-hour events</li>
+                            <li>Include time slots from 8 AM to 6 PM</li>
+                            <li>Add different background colors for event types</li>
+                            <li>Use proper table headers with scope</li>
+                            <li>Include a legend for event types</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(19)">Show Solution</button>
+                    <div class="solution" id="solution-19">
+                        <pre><code>&lt;table border="1"&gt;
+    &lt;caption&gt;Weekly Event Schedule&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;Time&lt;/th&gt;
+            &lt;th scope="col"&gt;Monday&lt;/th&gt;
+            &lt;th scope="col"&gt;Tuesday&lt;/th&gt;
+            &lt;th scope="col"&gt;Wednesday&lt;/th&gt;
+            &lt;th scope="col"&gt;Thursday&lt;/th&gt;
+            &lt;th scope="col"&gt;Friday&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;8:00-9:00&lt;/th&gt;
+            &lt;td&gt;Team Meeting&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;Team Meeting&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;Weekly Review&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;9:00-11:00&lt;/th&gt;
+            &lt;td colspan="2"&gt;Project Work&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;Client Call&lt;/td&gt;
+            &lt;td&gt;Project Work&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;11:00-12:00&lt;/th&gt;
+            &lt;td&gt;Training&lt;/td&gt;
+            &lt;td&gt;Documentation&lt;/td&gt;
+            &lt;td&gt;Training&lt;/td&gt;
+            &lt;td&gt;Documentation&lt;/td&gt;
+            &lt;td&gt;Planning&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 20 -->
+                <div class="exercise">
+                    <h4>Exercise 20: Multi-step Registration Form</h4>
+                    <p><strong>Objective:</strong> Create a multi-step form with different sections</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Create a form with 3 steps: Personal Info, Address, Preferences</li>
+                            <li>Use fieldset for each step</li>
+                            <li>Include proper legends for each section</li>
+                            <li>Add required fields with validation</li>
+                            <li>Include different input types for each step</li>
+                            <li>Add navigation buttons (Previous/Next)</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(20)">Show Solution</button>
+                    <div class="solution" id="solution-20">
+                        <pre><code>&lt;h2&gt;Multi-step Registration&lt;/h2&gt;
+&lt;form&gt;
+    &lt;fieldset id="step1"&gt;
+        &lt;legend&gt;Personal Information&lt;/legend&gt;
+        &lt;label for="fullname"&gt;Full Name:&lt;/label&gt;
+        &lt;input type="text" id="fullname" name="fullname" required&gt;&lt;br&gt;
+        
+        &lt;label for="email"&gt;Email:&lt;/label&gt;
+        &lt;input type="email" id="email" name="email" required&gt;&lt;br&gt;
+        
+        &lt;label for="phone"&gt;Phone:&lt;/label&gt;
+        &lt;input type="tel" id="phone" name="phone"&gt;&lt;br&gt;
+    &lt;/fieldset&gt;
+
+    &lt;fieldset id="step2"&gt;
+        &lt;legend&gt;Address Information&lt;/legend&gt;
+        &lt;label for="street"&gt;Street:&lt;/label&gt;
+        &lt;input type="text" id="street" name="street"&gt;&lt;br&gt;
+        
+        &lt;label for="city"&gt;City:&lt;/label&gt;
+        &lt;input type="text" id="city" name="city"&gt;&lt;br&gt;
+        
+        &lt;label for="zipcode"&gt;ZIP Code:&lt;/label&gt;
+        &lt;input type="text" id="zipcode" name="zipcode"&gt;&lt;br&gt;
+    &lt;/fieldset&gt;
+
+    &lt;fieldset id="step3"&gt;
+        &lt;legend&gt;Preferences&lt;/legend&gt;
+        &lt;label&gt;Communication Preference:&lt;/label&gt;&lt;br&gt;
+        &lt;input type="radio" id="email-com" name="communication" value="email"&gt;
+        &lt;label for="email-com"&gt;Email&lt;/label&gt;&lt;br&gt;
+        
+        &lt;input type="radio" id="phone-com" name="communication" value="phone"&gt;
+        &lt;label for="phone-com"&gt;Phone&lt;/label&gt;&lt;br&gt;
+        
+        &lt;label for="newsletter"&gt;
+            &lt;input type="checkbox" id="newsletter" name="newsletter"&gt;
+            Subscribe to newsletter
+        &lt;/label&gt;
+    &lt;/fieldset&gt;
+
+    &lt;div class="form-navigation"&gt;
+        &lt;button type="button"&gt;Previous&lt;/button&gt;
+        &lt;button type="button"&gt;Next&lt;/button&gt;
+        &lt;input type="submit" value="Complete Registration"&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                    </div>
+                </div>
+                                <!-- Exercise 21 -->
+                <div class="exercise">
+                    <h4>Exercise 21: Recipe Page with Semantic HTML</h4>
+                    <p><strong>Objective:</strong> Create a complete recipe page using semantic elements</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Use &lt;article&gt; for the main recipe</li>
+                            <li>Include preparation time and cooking time</li>
+                            <li>Add ingredients list with proper measurements</li>
+                            <li>Create step-by-step instructions</li>
+                            <li>Include nutritional information in a table</li>
+                            <li>Add cooking tips in an &lt;aside&gt;</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(21)">Show Solution</button>
+                    <div class="solution" id="solution-21">
+                        <pre><code>&lt;article class="recipe"&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Classic Chocolate Chip Cookies&lt;/h1&gt;
+        &lt;p&gt;&lt;time datetime="PT30M"&gt;Prep: 30 mins&lt;/time&gt; | &lt;time datetime="PT15M"&gt;Cook: 15 mins&lt;/time&gt;&lt;/p&gt;
+    &lt;/header&gt;
+
+    &lt;section&gt;
+        &lt;h2&gt;Ingredients&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;2 1/4 cups all-purpose flour&lt;/li&gt;
+            &lt;li&gt;1 teaspoon baking soda&lt;/li&gt;
+            &lt;li&gt;1 cup butter, softened&lt;/li&gt;
+            &lt;li&gt;3/4 cup granulated sugar&lt;/li&gt;
+            &lt;li&gt;2 cups chocolate chips&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+        &lt;h2&gt;Instructions&lt;/h2&gt;
+        &lt;ol&gt;
+            &lt;li&gt;Preheat oven to 375°F (190°C)&lt;/li&gt;
+            &lt;li&gt;Mix flour and baking soda in small bowl&lt;/li&gt;
+            &lt;li&gt;Beat butter and sugars in large bowl&lt;/li&gt;
+            &lt;li&gt;Bake for 9-11 minutes until golden brown&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/section&gt;
+
+    &lt;aside&gt;
+        &lt;h3&gt;Chef's Tips&lt;/h3&gt;
+        &lt;p&gt;For chewier cookies, chill the dough for 30 minutes before baking.&lt;/p&gt;
+    &lt;/aside&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;Recipe serves: 24 cookies&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 22 -->
+                <div class="exercise">
+                    <h4>Exercise 22: Product Comparison Table</h4>
+                    <p><strong>Objective:</strong> Create a detailed product comparison table</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Compare 3 different products</li>
+                            <li>Include features, specifications, and prices</li>
+                            <li>Use rowspan for features that apply to multiple products</li>
+                            <li>Add checkmarks (✓) and crosses (✗) for feature availability</li>
+                            <li>Include a "Best Value" highlight</li>
+                            <li>Add a call-to-action button for each product</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(22)">Show Solution</button>
+                    <div class="solution" id="solution-22">
+                        <pre><code>&lt;table border="1"&gt;
+    &lt;caption&gt;Smartphone Comparison&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;Features&lt;/th&gt;
+            &lt;th scope="col"&gt;Basic Model&lt;/th&gt;
+            &lt;th scope="col"&gt;Standard Model&lt;/th&gt;
+            &lt;th scope="col"&gt;Premium Model&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;Price&lt;/th&gt;
+            &lt;td&gt;$299&lt;/td&gt;
+            &lt;td&gt;$599&lt;/td&gt;
+            &lt;td&gt;$899&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;Storage&lt;/th&gt;
+            &lt;td&gt;64GB&lt;/td&gt;
+            &lt;td&gt;128GB&lt;/td&gt;
+            &lt;td&gt;256GB&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;Camera&lt;/th&gt;
+            &lt;td&gt;Single 12MP&lt;/td&gt;
+            &lt;td&gt;Dual 12MP&lt;/td&gt;
+            &lt;td&gt;Triple 12MP&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;5G Support&lt;/th&gt;
+            &lt;td&gt;✗&lt;/td&gt;
+            &lt;td&gt;✓&lt;/td&gt;
+            &lt;td&gt;✓&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;Water Resistance&lt;/th&gt;
+            &lt;td&gt;✗&lt;/td&gt;
+            &lt;td&gt;IP67&lt;/td&gt;
+            &lt;td&gt;IP68&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;button&gt;Buy Now&lt;/button&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;button&gt;Best Value&lt;/button&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;button&gt;Buy Now&lt;/button&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 23 -->
+                <div class="exercise">
+                    <h4>Exercise 23: Job Application Form</h4>
+                    <p><strong>Objective:</strong> Create a comprehensive job application form</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Include personal information section</li>
+                            <li>Add education history with dates</li>
+                            <li>Create work experience section</li>
+                            <li>Include file upload for resume</li>
+                            <li>Add references section</li>
+                            <li>Include consent and signature fields</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(23)">Show Solution</button>
+                    <div class="solution" id="solution-23">
+                        <pre><code>&lt;h2&gt;Job Application Form&lt;/h2&gt;
+&lt;form&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Personal Information&lt;/legend&gt;
+        &lt;label for="applicant-name"&gt;Full Name:&lt;/label&gt;
+        &lt;input type="text" id="applicant-name" name="applicant-name" required&gt;&lt;br&gt;
+
+        &lt;label for="applicant-email"&gt;Email:&lt;/label&gt;
+        &lt;input type="email" id="applicant-email" name="applicant-email" required&gt;&lt;br&gt;
+
+        &lt;label for="applicant-phone"&gt;Phone:&lt;/label&gt;
+        &lt;input type="tel" id="applicant-phone" name="applicant-phone"&gt;&lt;br&gt;
+    &lt;/fieldset&gt;
+
+    &lt;fieldset&gt;
+        &lt;legend&gt;Education&lt;/legend&gt;
+        &lt;label for="education"&gt;Highest Degree:&lt;/label&gt;
+        &lt;select id="education" name="education"&gt;
+            &lt;option value="highschool"&gt;High School&lt;/option&gt;
+            &lt;option value="associate"&gt;Associate Degree&lt;/option&gt;
+            &lt;option value="bachelor"&gt;Bachelor's Degree&lt;/option&gt;
+            &lt;option value="master"&gt;Master's Degree&lt;/option&gt;
+            &lt;option value="phd"&gt;PhD&lt;/option&gt;
+        &lt;/select&gt;&lt;br&gt;
+
+        &lt;label for="graduation-date"&gt;Graduation Date:&lt;/label&gt;
+        &lt;input type="month" id="graduation-date" name="graduation-date"&gt;&lt;br&gt;
+    &lt;/fieldset&gt;
+
+    &lt;fieldset&gt;
+        &lt;legend&gt;Work Experience&lt;/legend&gt;
+        &lt;label for="experience"&gt;Years of Experience:&lt;/label&gt;
+        &lt;input type="number" id="experience" name="experience" min="0" max="50"&gt;&lt;br&gt;
+
+        &lt;label for="resume"&gt;Upload Resume:&lt;/label&gt;
+        &lt;input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx"&gt;&lt;br&gt;
+    &lt;/fieldset&gt;
+
+    &lt;fieldset&gt;
+        &lt;legend&gt;References&lt;/legend&gt;
+        &lt;label for="reference1"&gt;Reference 1:&lt;/label&gt;
+        &lt;textarea id="reference1" name="reference1" rows="3" cols="50"&gt;&lt;/textarea&gt;&lt;br&gt;
+    &lt;/fieldset&gt;
+
+    &lt;fieldset&gt;
+        &lt;legend&gt;Consent&lt;/legend&gt;
+        &lt;label for="consent"&gt;
+            &lt;input type="checkbox" id="consent" name="consent" required&gt;
+            I certify that the information provided is accurate
+        &lt;/label&gt;&lt;br&gt;
+
+        &lt;label for="signature"&gt;Electronic Signature:&lt;/label&gt;
+        &lt;input type="text" id="signature" name="signature" required&gt;&lt;br&gt;
+    &lt;/fieldset&gt;
+
+    &lt;input type="submit" value="Submit Application"&gt;
+&lt;/form&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 24 -->
+                <div class="exercise">
+                    <h4>Exercise 24: Event Calendar</h4>
+                    <p><strong>Objective:</strong> Create a monthly event calendar using tables</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Create a calendar for a specific month</li>
+                            <li>Include day names as headers</li>
+                            <li>Add events on specific dates</li>
+                            <li>Use different colors for weekends</li>
+                            <li>Include a month/year header</li>
+                            <li>Add navigation for previous/next month</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(24)">Show Solution</button>
+                    <div class="solution" id="solution-24">
+                        <pre><code>&lt;div class="calendar"&gt;
+    &lt;header&gt;
+        &lt;button&gt;‹&lt;/button&gt;
+        &lt;h2&gt;January 2024&lt;/h2&gt;
+        &lt;button&gt;›&lt;/button&gt;
+    &lt;/header&gt;
+
+    &lt;table border="1"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;Sun&lt;/th&gt;
+                &lt;th scope="col"&gt;Mon&lt;/th&gt;
+                &lt;th scope="col"&gt;Tue&lt;/th&gt;
+                &lt;th scope="col"&gt;Wed&lt;/th&gt;
+                &lt;th scope="col"&gt;Thu&lt;/th&gt;
+                &lt;th scope="col"&gt;Fri&lt;/th&gt;
+                &lt;th scope="col"&gt;Sat&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;1&lt;/td&gt;
+                &lt;td&gt;2&lt;/td&gt;
+                &lt;td&gt;3&lt;/td&gt;
+                &lt;td&gt;4&lt;/td&gt;
+                &lt;td&gt;5&lt;/td&gt;
+                &lt;td&gt;6&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;7&lt;/td&gt;
+                &lt;td&gt;8&lt;/td&gt;
+                &lt;td&gt;9&lt;/td&gt;
+                &lt;td&gt;10&lt;/td&gt;
+                &lt;td&gt;11&lt;/td&gt;
+                &lt;td&gt;12&lt;/td&gt;
+                &lt;td&gt;13&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;14&lt;/td&gt;
+                &lt;td&gt;15&lt;br&gt;&lt;small&gt;Team Meeting&lt;/small&gt;&lt;/td&gt;
+                &lt;td&gt;16&lt;/td&gt;
+                &lt;td&gt;17&lt;/td&gt;
+                &lt;td&gt;18&lt;br&gt;&lt;small&gt;Project Deadline&lt;/small&gt;&lt;/td&gt;
+                &lt;td&gt;19&lt;/td&gt;
+                &lt;td&gt;20&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;21&lt;/td&gt;
+                &lt;td&gt;22&lt;/td&gt;
+                &lt;td&gt;23&lt;br&gt;&lt;small&gt;Training Session&lt;/small&gt;&lt;/td&gt;
+                &lt;td&gt;24&lt;/td&gt;
+                &lt;td&gt;25&lt;/td&gt;
+                &lt;td&gt;26&lt;/td&gt;
+                &lt;td&gt;27&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;28&lt;/td&gt;
+                &lt;td&gt;29&lt;/td&gt;
+                &lt;td&gt;30&lt;/td&gt;
+                &lt;td&gt;31&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Exercise 25 -->
+                <div class="exercise">
+                    <h4>Exercise 25: Complete Personal Portfolio Homepage</h4>
+                    <p><strong>Objective:</strong> Create a complete personal portfolio homepage</p>
+                    <div class="requirements">
+                        <p><strong>Requirements:</strong></p>
+                        <ul>
+                            <li>Use semantic HTML5 elements throughout</li>
+                            <li>Include header with navigation</li>
+                            <li>Add hero section with introduction</li>
+                            <li>Create skills section with progress indicators</li>
+                            <li>Include projects gallery</li>
+                            <li>Add contact form and footer</li>
+                        </ul>
+                    </div>
+                    <button class="toggle-solution" onclick="toggleSolution(25)">Show Solution</button>
+                    <div class="solution" id="solution-25">
+                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;John Doe - Portfolio&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav&gt;
+            &lt;h1&gt;John Doe&lt;/h1&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#projects"&gt;Projects&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;section id="home"&gt;
+            &lt;h2&gt;Welcome to My Portfolio&lt;/h2&gt;
+            &lt;p&gt;I'm a passionate web developer creating amazing digital experiences.&lt;/p&gt;
+            &lt;button&gt;View My Work&lt;/button&gt;
+        &lt;/section&gt;
+
+        &lt;section id="about"&gt;
+            &lt;h2&gt;About Me&lt;/h2&gt;
+            &lt;article&gt;
+                &lt;h3&gt;Skills&lt;/h3&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;HTML5 - Expert&lt;/li&gt;
+                    &lt;li&gt;CSS3 - Advanced&lt;/li&gt;
+                    &lt;li&gt;JavaScript - Intermediate&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/article&gt;
+        &lt;/section&gt;
+
+        &lt;section id="projects"&gt;
+            &lt;h2&gt;My Projects&lt;/h2&gt;
+            &lt;article&gt;
+                &lt;h3&gt;E-commerce Website&lt;/h3&gt;
+                &lt;p&gt;A fully responsive online store built with HTML, CSS, and JavaScript.&lt;/p&gt;
+            &lt;/article&gt;
+            &lt;article&gt;
+                &lt;h3&gt;Weather App&lt;/h3&gt;
+                &lt;p&gt;Real-time weather application with location detection.&lt;/p&gt;
+            &lt;/article&gt;
+        &lt;/section&gt;
+
+        &lt;section id="contact"&gt;
+            &lt;h2&gt;Get In Touch&lt;/h2&gt;
+            &lt;form&gt;
+                &lt;label for="contact-name"&gt;Name:&lt;/label&gt;
+                &lt;input type="text" id="contact-name" name="contact-name" required&gt;
+
+                &lt;label for="contact-email"&gt;Email:&lt;/label&gt;
+                &lt;input type="email" id="contact-email" name="contact-email" required&gt;
+
+                &lt;label for="contact-message"&gt;Message:&lt;/label&gt;
+                &lt;textarea id="contact-message" name="contact-message" required&gt;&lt;/textarea&gt;
+
+                &lt;button type="submit"&gt;Send Message&lt;/button&gt;
+            &lt;/form&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2024 John Doe. All rights reserved.&lt;/p&gt;
+        &lt;p&gt;Email: john@example.com | Phone: (555) 123-4567&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                </div>
+                    <!-- Each exercise has: exercise div, h4, objective, requirements, button, solution -->
+
+                </div>
+            </article>
+
+            <!-- LEVEL 2: INTERMEDIATE -->
+            <article id="level-2">
+                <h3>Level 2: Intermediate <span class="level-indicator level-intermediate">Exercises 26-50</span></h3>
+                <p>Build on fundamentals with forms, tables, and semantic HTML.</p>
+
+                <div class="exercise-grid">
+                    <!-- Exercise 26 -->
+                    <div class="exercise">
+                        <h4>Exercise 26: Semantic Blog Post</h4>
+                        <p><strong>Objective:</strong> Create a blog post using semantic HTML5 elements</p>
+                        <div class="requirements">
+                            <p><strong>Requirements:</strong></p>
+                            <ul>
+                                <li>Use &lt;article&gt; for the main blog content</li>
+                                <li>Include &lt;header&gt; with title and publish date</li>
+                                <li>Use &lt;section&gt; for different parts of the article</li>
+                                <li>Add &lt;aside&gt; for related links or author info</li>
+                                <li>Include &lt;footer&gt; with copyright information</li>
+                                <li>Use &lt;figure&gt; and &lt;figcaption&gt; for images</li>
+                                <li>Add proper heading hierarchy within the article</li>
+                            </ul>
+                        </div>
+                        <button class="toggle-solution" onclick="toggleSolution(26)">Show Solution</button>
+                        <div class="solution" id="solution-26">
+                            <pre><code>&lt;article&gt;
+    &lt;header&gt;
+        &lt;h1&gt;The Future of Web Development&lt;/h1&gt;
+        &lt;p&gt;Published on &lt;time datetime="2024-01-15"&gt;January 15, 2024&lt;/time&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    
+    &lt;section&gt;
+        &lt;h2&gt;Introduction&lt;/h2&gt;
+        &lt;p&gt;Web development continues to evolve at a rapid pace...&lt;/p&gt;
+    &lt;/section&gt;
+    
+    &lt;figure&gt;
+        &lt;img src="web-dev-trends.jpg" alt="Web development trends 2024"&gt;
+        &lt;figcaption&gt;Latest trends in web development&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    
+    &lt;aside&gt;
+        &lt;h3&gt;About the Author&lt;/h3&gt;
+        &lt;p&gt;John Smith is a senior web developer with 10 years of experience.&lt;/p&gt;
+    &lt;/aside&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2024 Tech Blog. All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Continue with exercises 27-50 -->
+                    <!-- Additional exercises would follow the same pattern -->
+
+                </div>
+            </article>
+
+            <!-- LEVEL 3: ADVANCED -->
+            <article id="level-3">
+                <h3>Level 3: Advanced <span class="level-indicator level-advanced">Exercises 51-75</span></h3>
+                <p>Master complex layouts, multimedia, and accessibility.</p>
+
+                <div class="exercise-grid">
+                    <!-- Exercise 51 -->
+                    <div class="exercise">
+                        <h4>Exercise 51: University Schedule Table</h4>
+                        <p><strong>Objective:</strong> Create a complex weekly schedule with proper table semantics</p>
+                        <div class="requirements">
+                            <p><strong>Requirements:</strong></p>
+                            <ul>
+                                <li>Create a weekly schedule from 8 AM to 6 PM</li>
+                                <li>Use colspan for classes that span multiple time slots</li>
+                                <li>Use rowspan for time labels</li>
+                                <li>Include &lt;thead&gt;, &lt;tbody&gt;, and &lt;tfoot&gt;</li>
+                                <li>Add &lt;caption&gt; for table description</li>
+                                <li>Use scope attribute for proper accessibility</li>
+                                <li>Add different background colors for different types of classes</li>
+                                <li>Include a legend explaining the color coding</li>
+                            </ul>
+                        </div>
+                        <button class="toggle-solution" onclick="toggleSolution(51)">Show Solution</button>
+                        <div class="solution" id="solution-51">
+                            <pre><code>&lt;table border="1"&gt;
+    &lt;caption&gt;University Weekly Schedule - Computer Science Department&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;Time&lt;/th&gt;
+            &lt;th scope="col"&gt;Monday&lt;/th&gt;
+            &lt;th scope="col"&gt;Tuesday&lt;/th&gt;
+            &lt;th scope="col"&gt;Wednesday&lt;/th&gt;
+            &lt;th scope="col"&gt;Thursday&lt;/th&gt;
+            &lt;th scope="col"&gt;Friday&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;8:00-9:00&lt;/th&gt;
+            &lt;td&gt;Web Development&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;Web Development&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;Web Development Lab&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;9:00-10:00&lt;/th&gt;
+            &lt;td colspan="2"&gt;Database Systems (Double Period)&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;Database Systems&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- More rows would follow --&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="6"&gt;Total: 15 hours of classes per week&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Continue with exercises 52-75 -->
+
+                </div>
+            </article>
+
+            <!-- LEVEL 4: PROFESSIONAL -->
+            <article id="level-4">
+                <h3>Level 4: Professional <span class="level-indicator level-professional">Exercises 76-100</span></h3>
+                <p>Build real-world projects with SEO, accessibility, and best practices.</p>
+
+                <div class="exercise-grid">
+                    <!-- Exercise 76 -->
+                    <div class="exercise">
+                        <h4>Exercise 76: Personal Portfolio Website</h4>
+                        <p><strong>Objective:</strong> Build a complete personal portfolio website</p>
+                        <div class="requirements">
+                            <p><strong>Requirements:</strong></p>
+                            <ul>
+                                <li>Create a multi-page website structure (Home, About, Projects, Contact)</li>
+                                <li>Implement responsive navigation with active states</li>
+                                <li>Add a hero section with call-to-action</li>
+                                <li>Create a projects gallery with filter options</li>
+                                <li>Include a contact form with validation</li>
+                                <li>Add SEO meta tags and Open Graph tags</li>
+                                <li>Implement accessibility features (skip links, ARIA labels)</li>
+                                <li>Use semantic HTML throughout</li>
+                                <li>Add a footer with social media links</li>
+                            </ul>
+                        </div>
+                        <button class="toggle-solution" onclick="toggleSolution(76)">Show Solution</button>
+                        <div class="solution" id="solution-76">
+                            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;John Doe - Web Developer Portfolio&lt;/title&gt;
+    &lt;meta name="description" content="Professional web developer specializing in front-end development and UX design."&gt;
+    &lt;meta property="og:title" content="John Doe - Web Developer"&gt;
+    &lt;meta property="og:description" content="Professional web developer portfolio"&gt;
+    &lt;meta property="og:type" content="website"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Skip to main content for accessibility --&gt;
+    &lt;a href="#main-content" class="skip-link"&gt;Skip to main content&lt;/a&gt;
+    
+    &lt;header&gt;
+        &lt;nav aria-label="Main navigation"&gt;
+            &lt;div class="logo"&gt;
+                &lt;h1&gt;John Doe&lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;ul class="nav-links"&gt;
+                &lt;li&gt;&lt;a href="#home" aria-current="page"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#projects"&gt;Projects&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main id="main-content"&gt;
+        &lt;!-- Hero Section --&gt;
+        &lt;section id="home" class="hero"&gt;
+            &lt;div class="hero-content"&gt;
+                &lt;h2&gt;Hi, I'm &lt;span class="highlight"&gt;John Doe&lt;/span&gt;&lt;/h2&gt;
+                &lt;p class="hero-subtitle"&gt;Front-end Developer &amp; UI/UX Designer&lt;/p&gt;
+                &lt;p&gt;I create beautiful, functional websites with focus on user experience and performance.&lt;/p&gt;
+                &lt;div class="hero-buttons"&gt;
+                    &lt;a href="#projects" class="btn btn-primary"&gt;View My Work&lt;/a&gt;
+                    &lt;a href="#contact" class="btn btn-secondary"&gt;Get In Touch&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;!-- More sections would follow --&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;div class="social-links"&gt;
+            &lt;a href="#" aria-label="GitHub"&gt;GitHub&lt;/a&gt;
+            &lt;a href="#" aria-label="LinkedIn"&gt;LinkedIn&lt;/a&gt;
+            &lt;a href="#" aria-label="Twitter"&gt;Twitter&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;p&gt;&copy; 2024 John Doe. All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Continue with exercises 77-100 -->
+
+                </div>
+            </article>
+
+            <div class="exercise-nav">
+                <a href="#level-1">↑ Back to Level 1</a>
+                <a href="#exercises">↑ Back to Top</a>
+            </div>
+        </section>
+
+                <!-- Interactive Practice Area -->
+        <section id="interactive-practice">
+            <h2>🛠️ Interactive Practice Area</h2>
+            <p>Write HTML code below and see instant results in the preview. Perfect for testing the exercises!</p>
+            
+            <div class="practice-container">
+                <div class="code-editor">
+                    <div class="editor-header">
+                        <h4>📝 Write Your HTML Here:</h4>
+                        <button onclick="clearCode()" class="clear-btn">Clear</button>
+                    </div>
+                    <textarea id="html-code" placeholder="&lt;h1&gt;Start coding here!&lt;/h1&gt;&#10;&lt;p&gt;You will see the result instantly.&lt;/p&gt;" rows="15"></textarea>
+                    <div class="editor-actions">
+                        <button onclick="runCode()" class="run-btn">▶ Run Code</button>
+                        <button onclick="saveCode()" class="save-btn">💾 Save Code</button>
+                    </div>
+                </div>
+                
+                <div class="code-preview">
+                    <div class="preview-header">
+                        <h4>👀 Live Preview:</h4>
+                        <span class="preview-status" id="preview-status">Ready</span>
+                    </div>
+                    <div id="preview-area" class="preview-area">
+                        <p class="preview-placeholder">Your code preview will appear here...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="practice-examples">
+                <h4>🚀 Quick Start Examples:</h4>
+                <p>Try these examples or create your own:</p>
+                <div class="example-buttons">
+                    <button onclick="loadExample(1)" class="example-btn">Basic Page</button>
+                    <button onclick="loadExample(2)" class="example-btn">Lists</button>
+                    <button onclick="loadExample(3)" class="example-btn">Table</button>
+                    <button onclick="loadExample(4)" class="example-btn">Form</button>
+                    <button onclick="loadExample(5)" class="example-btn">Images</button>
+                    <button onclick="loadExample(6)" class="example-btn">Semantic Layout</button>
+                </div>
+            </div>
+
+            <div class="practice-tips">
+                <h4>💡 Pro Tips:</h4>
+                <ul>
+                    <li>Copy code from the exercises above and modify it</li>
+                    <li>Experiment with different HTML tags</li>
+                    <li>Try combining multiple elements together</li>
+                    <li>Use "Save Code" to keep your work</li>
+                    <li>Refresh the page to reset everything</li>
+                </ul>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
     <footer>
         <hr>
-        <p>HTML Guide for Students &copy; 2023</p>
+        <p>HTML Guide for Students &copy; 2025 by Gabriel Zavarse & 4geeks Academy</p>
         <p>Remember: HTML defines the structure, CSS adds styling, JavaScript adds interactivity!</p>
     </footer>
+
+    <script>
+        // JavaScript to toggle solution visibility
+        function toggleSolution(exerciseNumber) {
+            const solution = document.getElementById('solution-' + exerciseNumber);
+            const button = event.target;
+            
+            if (solution.classList.contains('show')) {
+                solution.classList.remove('show');
+                button.textContent = 'Show Solution';
+            } else {
+                solution.classList.add('show');
+                button.textContent = 'Hide Solution';
+            }
+        }
+
+        // Add smooth scrolling for navigation links
+        document.querySelectorAll('nav a, .exercise-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+    <script>
+// Practice area functionality
+function runCode() {
+    const htmlCode = document.getElementById('html-code').value;
+    const previewArea = document.getElementById('preview-area');
+    const previewStatus = document.getElementById('preview-status');
+    
+    try {
+        previewArea.innerHTML = htmlCode;
+        previewStatus.textContent = 'Code executed successfully!';
+        previewStatus.style.color = '#10b981';
+    } catch (error) {
+        previewArea.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+        previewStatus.textContent = 'Error in code';
+        previewStatus.style.color = '#ef4444';
+    }
+}
+
+function clearCode() {
+    document.getElementById('html-code').value = '';
+    document.getElementById('preview-area').innerHTML = '<p class="preview-placeholder">Your code preview will appear here...</p>';
+    document.getElementById('preview-status').textContent = 'Cleared';
+    document.getElementById('preview-status').style.color = '#6b7280';
+}
+
+function saveCode() {
+    const htmlCode = document.getElementById('html-code').value;
+    if (htmlCode.trim() === '') {
+        alert('Please write some code before saving!');
+        return;
+    }
+    
+    const blob = new Blob([htmlCode], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'my-html-practice.html';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+    document.getElementById('preview-status').textContent = 'Code saved!';
+    document.getElementById('preview-status').style.color = '#f59e0b';
+}
+
+function loadExample(exampleNum) {
+    const examples = {
+        1: `<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Page</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+        h1 { color: #2563eb; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Website!</h1>
+    <p>This is a basic HTML page structure.</p>
+    <p>You can modify this code and see the changes instantly.</p>
+    <ul>
+        <li>Learn HTML</li>
+        <li>Practice coding</li>
+        <li>Build amazing websites</li>
+    </ul>
+</body>
+</html>`,
+
+        2: `<h2>My Favorite Programming Languages</h2>
+<ol>
+    <li>HTML
+        <ul>
+            <li>Easy to learn</li>
+            <li>Fundamental for web development</li>
+        </ul>
+    </li>
+    <li>CSS
+        <ul>
+            <li>Makes websites beautiful</li>
+            <li>Great for creativity</li>
+        </ul>
+    </li>
+    <li>JavaScript
+        <ul>
+            <li>Adds interactivity</li>
+            <li>Very powerful</li>
+        </ul>
+    </li>
+</ol>
+
+<h3>Web Development Tools</h3>
+<dl>
+    <dt>VS Code</dt>
+    <dd>A powerful code editor</dd>
+    <dt>Git</dt>
+    <dd>Version control system</dd>
+</dl>`,
+
+        3: `<h2>Student Grades</h2>
+<table border="1" style="width: 100%; border-collapse: collapse;">
+    <thead style="background: #2563eb; color: white;">
+        <tr>
+            <th>Student Name</th>
+            <th>Course</th>
+            <th>Grade</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John Smith</td>
+            <td>Web Development</td>
+            <td>A</td>
+            <td>Passed</td>
+        </tr>
+        <tr>
+            <td>Sarah Johnson</td>
+            <td>Graphic Design</td>
+            <td>B+</td>
+            <td>Passed</td>
+        </tr>
+        <tr>
+            <td>Mike Chen</td>
+            <td>Data Science</td>
+            <td>A-</td>
+            <td>Passed</td>
+        </tr>
+    </tbody>
+    <tfoot style="background: #f1f5f9;">
+        <tr>
+            <td colspan="3">Total Students</td>
+            <td>3</td>
+        </tr>
+    </tfoot>
+</table>`,
+
+        4: `<h2>Contact Us</h2>
+<form style="background: #f8fafc; padding: 20px; border-radius: 8px;">
+    <fieldset>
+        <legend>Personal Information</legend>
+        
+        <div style="margin-bottom: 15px;">
+            <label for="fullname" style="display: block; margin-bottom: 5px; font-weight: bold;">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required 
+                   style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 4px;">
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+            <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email:</label>
+            <input type="email" id="email" name="email" required 
+                   style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 4px;">
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Interests:</label>
+            <input type="checkbox" id="web" name="interests" value="web">
+            <label for="web">Web Development</label><br>
+            <input type="checkbox" id="design" name="interests" value="design">
+            <label for="design">Graphic Design</label><br>
+            <input type="checkbox" id="mobile" name="interests" value="mobile">
+            <label for="mobile">Mobile Apps</label>
+        </div>
+        
+        <button type="submit" 
+                style="background: #2563eb; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            Submit Form
+        </button>
+    </fieldset>
+</form>`,
+
+        5: `<h2>Image Gallery</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 20px 0;">
+    <div style="text-align: center;">
+        <img src="https://via.placeholder.com/200x150/2563eb/ffffff?text=Nature" 
+             alt="Beautiful nature landscape" 
+             style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <p style="margin-top: 10px; font-weight: bold;">Nature Scene</p>
+    </div>
+    
+    <div style="text-align: center;">
+        <img src="https://via.placeholder.com/200x150/7c3aed/ffffff?text=City" 
+             alt="Modern city skyline" 
+             style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <p style="margin-top: 10px; font-weight: bold;">City View</p>
+    </div>
+    
+    <div style="text-align: center;">
+        <img src="https://via.placeholder.com/200x150/f59e0b/ffffff?text=Technology" 
+             alt="Technology and innovation" 
+             style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <p style="margin-top: 10px; font-weight: bold;">Technology</p>
+    </div>
+</div>
+
+<h3>Image with Figure Caption</h3>
+<figure style="margin: 0; text-align: center;">
+    <img src="https://via.placeholder.com/400x200/10b981/ffffff?text=Learning+HTML" 
+         alt="Learning web development" 
+         style="max-width: 100%; border-radius: 8px;">
+    <figcaption style="margin-top: 10px; font-style: italic; color: #6b7280;">
+        This image represents the journey of learning HTML and web development.
+    </figcaption>
+</figure>`,
+
+        6: `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML Example</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        header, footer { background: #1e293b; color: white; padding: 1rem; text-align: center; }
+        nav { background: #374151; padding: 1rem; }
+        nav a { color: white; margin: 0 1rem; text-decoration: none; }
+        main { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+        article { background: white; padding: 1.5rem; margin: 1rem 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        aside { background: #f8fafc; padding: 1rem; border-radius: 8px; margin: 1rem 0; }
+        section { margin: 2rem 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Semantic Website</h1>
+        <p>Proper HTML5 structure example</p>
+    </header>
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <main>
+        <article>
+            <header>
+                <h2>Understanding Semantic HTML</h2>
+                <p>Published on <time datetime="2024-01-15">January 15, 2024</time></p>
+            </header>
+            
+            <section>
+                <h3>What is Semantic HTML?</h3>
+                <p>Semantic HTML introduces meaning to the web page rather than just presentation.</p>
+            </section>
+            
+            <section>
+                <h3>Why Use Semantic Elements?</h3>
+                <p>They make your HTML more readable and improve accessibility.</p>
+            </section>
+            
+            <footer>
+                <p>Written by: Web Development Team</p>
+            </footer>
+        </article>
+        
+        <aside>
+            <h3>Related Articles</h3>
+            <ul>
+                <li><a href="#">HTML5 Best Practices</a></li>
+                <li><a href="#">CSS Grid Layout</a></li>
+                <li><a href="#">Web Accessibility</a></li>
+            </ul>
+        </aside>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>`
+    };
+    
+    document.getElementById('html-code').value = examples[exampleNum];
+    runCode();
+}
+
+// Auto-run code when typing (optional)
+document.getElementById('html-code').addEventListener('input', function() {
+    clearTimeout(this.timer);
+    this.timer = setTimeout(runCode, 1000);
+});
+
+// Initialize with a basic example
+window.addEventListener('load', function() {
+    loadExample(1);
+});
+</script>
 </body>
 </html>
